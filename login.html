@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Welcome to Login Page!</h1>
+    <td>
+        <input type="emal" placeholder="User name" id="email" >
+    </td>
+
+    <td>
+        <input type="password" placeholder="Password" id="pwd">
+    </td>
+    <input type="submit" value="Login" class="button" onclick="login()" >
+
+    <!--
+    <script src="login.js"></script>
+    -->
+
+    <script>
+        // console.log("Hello World");
+        function login(){
+            userName = document.getElementById("email").value;
+            passWord = document.getElementById("pwd").value;
+
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (userName == ''){
+                alert("Please enter the user name ");
+            }
+            else if(passWord = ''){
+                alert("Please enter the password ");
+            }
+            else if(!filter.test(userName)){ //returns a regex expression that filter exists or not
+                alert("User name is not valid. Please try again ");
+            }
+            else if(passWord.length < 6 || passWord.length > 6){
+                alert("Incorrect Password ");
+            }
+            else{
+                alert("Thank you for logging in. You are being redireced to Amazon.in. Happy Shopping! ");
+                window.location = "https://www.amazon.in/"
+                
+            }
+        }
+    </script>
+</body>
+</html>
