@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./signup.css">
 </head>
+
 <body>
-    <h2>Welcome to SignUp page</h2>
+    <div class="container">
+        <div><img id="image" src="./img/signup.jpeg" alt="Coming soon"></div>
+        <div class="signup-container">
+            <div><a class="sign-button" href="/dribblePage/login.html">Sign In</a></div>
+            <p style="font-size: 14px; float: right;">Already a member? <a id="member" style="font-size: 14px;" href="./login.html"> Sign in</a></p>
+            <form action="form.php">
+                <div>
+                    <h2>Sign up to Dribbble</h2>
+                    <button><a class="google-login-button"
+                            href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Sign
+                            up with Google </a></button>
+                    <p class="or">------------------------------Or------------------------------</p>
+                    <div class="name-username-container">
+                        
+                        <h4 class="username-password">Name</h4>
+                        <input class="name-username" type="text" name="name" required id="name">
+                        
+                        <h4 class="username-password" id=username>Username</h4>
+                        <input class="name-username" type="text" name="username" required id="username">
+
+                    </div>
+                    
+                    <h4 class="username-password">Email</h4>
+                    <input class="email-password" type="text" name="email" required id="email">
+            
+                    <h4 class="username-password">Password</h4>
+                    <input class="email-password" type="password" name="pwd1" required id="pwd1">
+                    
+                    <h4 class="username-password">Confirm Password</h4>
+                    <input class="email-password" type="password" name="pwd2" required id="pwd2">
+                    <p class="password-condition">*Upper case, Lower case, Special character and Numeric letter are required in Password</p> 
+                    <!-- <button class="signup-click" type="submit" onclick="signup()">Create Account</button> -->
+                    <input type="submit" value="Create Account" class="signup-click" onclick="signUp()">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="signUp.js"></script>
+
+    <!-- <h2>Welcome to SignUp page</h2>
     <table >
         <tr>
             <td>Name:</td>
@@ -38,9 +82,10 @@
     </table>
     <p>Upper case, Lower case, Special character and Numeric letter are required in Password</p>
 
-    <input type="submit" value="SignUp" class="button" onclick="signUp()">
+    <input type="submit" value="SignUp" class="button" onclick="signUp()"> -->
 
-    <script src="signUp.js"></script>
+    
 
 </body>
+
 </html>

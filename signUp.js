@@ -1,5 +1,5 @@
 function signUp(){
-    firstName = document.getElementById("name").value;
+    Fname = document.getElementById("name").value;
     userName = document.getElementById("username").value;
     emailId = document.getElementById("email").value;
     passWord1 = document.getElementById("pwd1").value;
@@ -9,7 +9,7 @@ function signUp(){
     var letters = /^[A-Za-z]+$/;
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     
-    if(firstName == ''){
+    if(Fname == ''){
         alert("Please enter your name ");
     }
     else if(userName == ''){
@@ -25,7 +25,7 @@ function signUp(){
         alert("Please confirm the password ");
     }
 
-    else if(!letters.test(firstName)){
+    else if(!letters.test(fName)){
         alert("Name can be alphabets only. Please enter again ");
     }
 

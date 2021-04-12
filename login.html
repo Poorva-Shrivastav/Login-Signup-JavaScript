@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="./login.css">
 </head>
+
 <body>
-    <h1>Welcome to Login Page!</h1>
-    <td>
+    <div class="container">
+        <div><img id="image" src="./img/login.jpeg" alt="Coming soon"></div>
+        <div class="login-container">
+            <div><a class="sign-button" href="/dribblePage/login.html">Sign In</a></div>
+            <p style="font-size: 14px;">Not a member? <a style="font-size: 14px;" id="not-member" href="./signUp.html"> Sign up now</a></p>
+            <form action="./login.html">
+                <div>
+                    <h2>Sign in to Dribbble</h2>
+                    <button><a class="google-login-button"
+                            href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Sign
+                            in with Google </a></button>
+                    <p class="or">------------------------------Or------------------------------</p>
+                    <h4 class="username-password">Username or Email Address</h4>
+                    <input class="username" type="text" name="username" required id="email">
+                    <!-- <div class="username"></div> -->
+                    <h4 class="username-password">Password</h4>
+                    <input class="username" type="password" name="password" required id="pwd">
+                    <!-- <button class="username"></button> -->
+                    <!-- <div class="signin-click">Sign in</div> -->
+                    <button class="signin-click" type="submit" onclick="login()">Sign in</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <!-- <h1>Welcome to Login Page!</h1> -->
+    <!-- <td>
         <input type="emal" placeholder="User name" id="email" >
     </td>
 
     <td>
         <input type="password" placeholder="Password" id="pwd">
     </td>
-    <input type="submit" value="Login" class="button" onclick="login()" >
+    <input type="submit" value="Login" class="button" onclick="login()" > -->
 
-    <!--
+
     <script src="login.js"></script>
-    -->
 
-    <script>
+
+    <!-- <script>
         // console.log("Hello World");
         function login(){
             userName = document.getElementById("email").value;
@@ -46,6 +74,9 @@
                 
             }
         }
-    </script>
+    </script> -->
+
+
 </body>
+
 </html>
